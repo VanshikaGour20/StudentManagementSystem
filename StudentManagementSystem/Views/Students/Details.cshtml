@@ -1,0 +1,32 @@
+﻿@model StudentManagementSystem.Models.Student
+
+@{
+    ViewBag.Title = "Student Details";
+}
+
+<h2>Student Details</h2>
+
+<div class="form-horizontal">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Full Name</dt>
+        <dd>@Model.fullName</dd>
+        <dt>Roll No</dt>
+        <dd>@Model.rollNo</dd>
+        <dt>Date of Birth</dt>
+        <dd>@Model.dateOfBirth.ToShortDateString()</dd>
+        <dt>Gender</dt>
+        <dd>@Model.gender</dd>
+        <dt>Course</dt>
+        <dd>@Model.course</dd>
+        <dt>Email</dt>
+        <dd>@Model.email</dd>
+        <dt>Phone</dt>
+        <dd>@Model.phone</dd>
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }, new { @class = "btn btn-warning" })
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+</p>
